@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="885.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.elibrary.ntuamultimediaproject.controllers.DashboardController">
+    <children>
+        <BorderPane prefHeight="590.0" prefWidth="886.0">
+            <left>
+                <Pane prefHeight="590.0" prefWidth="68.0" styleClass="backgroundColor" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="18.0" layoutY="212.0" onMouseClicked="#handleHutIconClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hut.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="44.0" layoutX="17.0" layoutY="342.0" onMouseClicked="#handleBookIconClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/book.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="20.0" layoutY="279.0" onMouseClicked="#handleSearchIconClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/search.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="22.0" layoutY="534.0" onMouseClicked="#handleLogout" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logout.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            </left>
+         <center>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="46.0" prefHeight="187.0" prefWidth="716.0" styleClass="pane" stylesheets="@../css/style.css">
+                     <children>
+                        <HBox prefHeight="78.0" prefWidth="716.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="18.0" prefWidth="76.0" text="Dashboard" textFill="#8364d3">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="dateLabel" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="604.0" text="{date}" />
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="115.0" prefWidth="716.0">
+                           <children>
+                              <Label fx:id="welcomeLabel" prefHeight="37.0" prefWidth="703.0" text="Welcome back, {username}!" textFill="#000000">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="113.0" layoutY="319.0" prefHeight="145.0" prefWidth="257.0" style="-fx-background-radius: 20;" styleClass="backgroundColor" stylesheets="@../css/style.css">
+                     <children>
+                        <Label prefHeight="49.0" prefWidth="257.0" style="-fx-padding: 20;" text="Total active borrows" textFill="WHITE">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totalBorrowsLabel" alignment="BASELINE_RIGHT" prefHeight="84.0" prefWidth="257.0" style="-fx-padding: 10;" text="number" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="445.0" layoutY="319.0" prefHeight="145.0" prefWidth="257.0" style="-fx-background-radius: 20;" styleClass="backgroundColor" stylesheets="@../css/style.css">
+                     <children>
+                        <Label prefHeight="49.0" prefWidth="257.0" style="-fx-padding: 20;" text="Total available books" textFill="WHITE">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totalBooksLabel" alignment="BASELINE_RIGHT" prefHeight="84.0" prefWidth="257.0" style="-fx-padding: 10;" text="number" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Label layoutX="60.0" layoutY="227.0" prefHeight="30.0" prefWidth="310.0" text="Here are some stats for you..." textFill="#8364d3">
+                     <font>
+                        <Font name="System Bold Italic" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

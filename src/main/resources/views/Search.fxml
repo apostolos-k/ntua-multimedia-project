@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="885.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.elibrary.ntuamultimediaproject.controllers.SearchController">
+    <children>
+        <BorderPane prefHeight="590.0" prefWidth="886.0">
+            <left>
+                <Pane prefHeight="590.0" prefWidth="68.0" styleClass="backgroundColor" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="18.0" layoutY="212.0" onMouseClicked="#handleHutIconClick" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/hut.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="44.0" layoutX="17.0" layoutY="342.0" onMouseClicked="#handleBookIconClick" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/book.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="20.0" layoutY="279.0" onMouseClicked="#handleSearchIconClick" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/search.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="22.0" layoutY="534.0" onMouseClicked="#handleLogout" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/logout.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+            </left>
+            <center>
+                <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox layoutX="46.0" prefHeight="187.0" prefWidth="716.0" styleClass="pane" stylesheets="@../css/style.css">
+                            <children>
+                                <HBox prefHeight="78.0" prefWidth="716.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="76.0" text="Search" textFill="#8364d3">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="dateLabel" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="604.0" text="{date}" />
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                    </padding>
+                                </HBox>
+                                <HBox prefHeight="115.0" prefWidth="716.0">
+                                    <children>
+                                        <Label prefHeight="37.0" prefWidth="703.0" text="Here you can find any book you want!" textFill="#000000">
+                                            <font>
+                                                <Font name="System Bold" size="30.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                    </padding>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <TextField fx:id="titleField" layoutX="103.0" layoutY="253.0" prefHeight="33.0" prefWidth="160.0" style="-fx-border-color: #8364d3; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-insets: 0; -fx-background-color: white;" />
+                        <TextField fx:id="writerField" layoutX="329.0" layoutY="253.0" prefHeight="33.0" prefWidth="160.0" style="-fx-border-color: #8364d3; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-insets: 0; -fx-background-color: white;" />
+                        <TextField fx:id="yearOfPublishField" layoutX="539.0" layoutY="253.0" prefHeight="33.0" prefWidth="160.0" style="-fx-border-color: #8364d3; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-insets: 0; -fx-background-color: white;" />
+                        <Label layoutX="165.0" layoutY="219.0" text="Title" textFill="#8364d3">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="383.0" layoutY="219.0" text="Writer" textFill="#8364d3">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="556.0" layoutY="219.0" text="Year of Publish" textFill="#8364d3">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Button layoutX="368.0" layoutY="311.0" mnemonicParsing="false" onAction="#handleSearchButtonClick" prefHeight="30.0" prefWidth="83.0" stylesheets="@../css/style.css" text="Search" />
+                        <StackPane />
+                          <ScrollPane hbarPolicy="NEVER" layoutX="219.0" layoutY="363.0" prefHeight="227.0" prefWidth="379.0" style="-fx-background: white; -fx-border-color: white">
+                              <content>
+                                  <VBox fx:id="searchResultsVBox" alignment="CENTER" minHeight="0.0" minWidth="0.0" prefWidth="360.0" style="-fx-background-color: white" />
+                              </content>
+                          </ScrollPane>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

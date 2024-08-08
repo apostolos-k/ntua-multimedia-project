@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="885.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.elibrary.ntuamultimediaproject.controllers.AdminBorrowsController">
+    <children>
+        <BorderPane prefHeight="590.0" prefWidth="886.0">
+            <left>
+                <Pane prefHeight="590.0" prefWidth="68.0" styleClass="adminBackgroundColor" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="19.0" layoutY="386.0" onMouseClicked="#handleBorrowIconClick" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/borrows.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="44.0" layoutX="18.0" layoutY="211.0" onMouseClicked="#handleBookIconClick" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/book.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="19.0" layoutY="273.0" onMouseClicked="#handleCategoryIconClick" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/categories.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="39.0" fitWidth="32.0" layoutX="20.0" layoutY="324.0" onMouseClicked="#handleUserIconClick" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/users.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="37.0" fitWidth="41.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/setting.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="22.0" layoutY="534.0" onMouseClicked="#handleLogout" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/logout.png" />
+                            </image>
+                        </ImageView>
+                    </children></Pane>
+            </left>
+            <center>
+                <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox layoutX="46.0" prefHeight="35.0" prefWidth="716.0" styleClass="pane" stylesheets="@../css/style.css">
+                            <children>
+                                <HBox prefHeight="78.0" prefWidth="716.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="220.0" text="Borrows Management" textFill="#0e6aff">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="dateLabel" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="604.0" text="{date}" />
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                    </padding>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <ScrollPane hbarPolicy="NEVER" layoutX="215.0" layoutY="174.0" prefHeight="365.0" prefWidth="379.0" style="-fx-background: white; -fx-border-color: white">
+                            <content>
+                                <VBox fx:id="borrowsVBox" alignment="CENTER" minHeight="0.0" minWidth="0.0" prefWidth="360.0" style="-fx-background-color: white" />
+                            </content>
+                        </ScrollPane>
+                  <Label layoutX="209.0" layoutY="134.0" prefHeight="24.0" prefWidth="394.0" text="Terminate an active borrow by clicking the button">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

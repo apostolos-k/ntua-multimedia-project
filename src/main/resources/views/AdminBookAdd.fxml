@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="885.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.elibrary.ntuamultimediaproject.controllers.AdminBookDetailsController">
+    <children>
+        <BorderPane prefHeight="590.0" prefWidth="886.0">
+            <left>
+                <Pane prefHeight="590.0" prefWidth="68.0" styleClass="adminBackgroundColor" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="37.0" fitWidth="41.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/setting.png" />
+                            </image>
+                        </ImageView>
+                        <Separator layoutX="12.0" layoutY="64.0" prefHeight="6.0" prefWidth="44.0" />
+                        <ImageView fitHeight="37.0" fitWidth="41.0" layoutX="13.0" layoutY="79.0" onMouseClicked="#backFunction" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/back-arrow.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="22.0" layoutY="534.0" onMouseClicked="#handleLogout" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/logout.png" />
+                            </image>
+                        </ImageView>
+                    </children></Pane>
+            </left>
+            <center>
+                <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox layoutX="46.0" prefHeight="35.0" prefWidth="716.0" styleClass="pane" stylesheets="@../css/style.css">
+                            <children>
+                                <HBox prefHeight="78.0" prefWidth="716.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="177.0" text="Add a Book" textFill="#0e6aff">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="dateLabel" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="604.0" text="{date}" />
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                    </padding>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <Button layoutX="325.0" layoutY="461.0" mnemonicParsing="false" onAction="#handleAddBook" styleClass="adminButton" stylesheets="@../css/style.css" text="Add Book" />
+                        <ChoiceBox fx:id="categoryField" layoutX="160.0" layoutY="369.0" prefHeight="26.0" prefWidth="161.0" />
+                        <TextField fx:id="titleField" layoutX="161.0" layoutY="163.0" style="-fx-border-color: #0e6aff; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-insets: 0; -fx-background-color: white;" />
+                        <TextField fx:id="copiesField" layoutX="453.0" layoutY="298.0" style="-fx-border-color: #0e6aff; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-insets: 0; -fx-background-color: white;" />
+                        <TextField fx:id="publisherField" layoutX="161.0" layoutY="298.0" style="-fx-border-color: #0e6aff; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-insets: 0; -fx-background-color: white;" />
+                        <TextField fx:id="yearField" layoutX="453.0" layoutY="163.0" style="-fx-border-color: #0e6aff; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-insets: 0; -fx-background-color: white;" />
+                        <TextField fx:id="writerField" layoutX="161.0" layoutY="228.0" style="-fx-border-color: #0e6aff; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-insets: 0; -fx-background-color: white;" />
+                        <TextField fx:id="isbnField" layoutX="453.0" layoutY="228.0" style="-fx-border-color: #0e6aff; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-insets: 0; -fx-background-color: white;" />
+                        <Button layoutX="411.0" layoutY="460.0" mnemonicParsing="false" onAction="#handleCancel" styleClass="adminButtonCancel" stylesheets="@../css/style.css" text="Cancel" />
+                        <Label layoutX="160.0" layoutY="145.0" text="Title">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="161.0" layoutY="210.0" text="Writter">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="159.0" layoutY="281.0" text="Publisher">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="159.0" layoutY="352.0" text="Category">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="453.0" layoutY="145.0" text="Year of Publish">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="454.0" layoutY="210.0" text="ISBN">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="453.0" layoutY="281.0" text="Number of Copies">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

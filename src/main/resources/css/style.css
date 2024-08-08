@@ -1,0 +1,45 @@
+.backgroundColor{
+    -fx-background-color: linear-gradient(to left, #c0b0ee, #6d4ab0);
+}
+
+.adminBackgroundColor{
+    -fx-background-color: linear-gradient(to left, #1f94ea, #0a2cf5);
+}
+
+.button{
+    -fx-background-color: #8364d3;
+    -fx-background-radius: 5;
+    -fx-text-fill: #ffffff;
+}
+
+.button2{
+    -fx-background-color: #b0a1d3;
+    -fx-background-radius: 5;
+    -fx-text-fill: #ffffff;
+}
+
+.adminButton{
+    -fx-background-color: #0e6aff;
+    -fx-background-radius: 5;
+    -fx-text-fill: #ffffff;
+}
+
+.adminButtonCancel{
+    -fx-background-color: white;
+    -fx-border-color: #0e6aff;
+    -fx-background-radius: 5;
+    -fx-text-fill: #0e6aff;
+    -fx-border-radius: 5;
+}
+
+.adminButtonDelete{
+    -fx-background-color: red;
+    -fx-background-radius: 5;
+    -fx-text-fill: #ffffff;
+}
+
+.pane{
+    -fx-background-color: #ebe9e8;
+    -fx-background-radius: 0px 0px 30px 30px;
+    -fx-border-radius: 0px 0px 30px 30px;
+}

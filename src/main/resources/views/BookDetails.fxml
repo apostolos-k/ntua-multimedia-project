@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="885.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.elibrary.ntuamultimediaproject.controllers.BookDetailsController">
+    <children>
+        <BorderPane prefHeight="590.0" prefWidth="886.0">
+            <left>
+                <Pane prefHeight="590.0" prefWidth="68.0" styleClass="backgroundColor" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                   <ImageView fitHeight="36.0" fitWidth="41.0" layoutX="16.0" layoutY="30.0" onMouseClicked="#backFunction" pickOnBounds="true" preserveRatio="true">
+                       <image>
+                           <Image url="@../images/back-arrow.png" />
+                       </image>
+                   </ImageView>
+                   <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="22.0" layoutY="534.0" onMouseClicked="#handleLogout" pickOnBounds="true" preserveRatio="true">
+                       <image>
+                           <Image url="@../images/logout.png" />
+                       </image>
+                   </ImageView>
+               </children></Pane>
+            </left>
+            <center>
+                <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox layoutX="46.0" prefHeight="38.0" prefWidth="716.0" styleClass="pane" stylesheets="@../css/style.css">
+                            <children>
+                                <HBox prefHeight="78.0" prefWidth="716.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="93.0" text="Book Details" textFill="#8364d3">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="dateLabel" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="604.0" text="{date}" />
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                    </padding>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <ScrollPane layoutX="473.0" layoutY="286.0" prefHeight="131.0" prefWidth="267.0">
+                            <content>
+                                <VBox fx:id="commentsVBox" spacing="5"/>
+                            </content>
+                        </ScrollPane>
+                  <Label layoutX="474.0" layoutY="246.0" text="Comments">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                        <Button layoutX="362.0" layoutY="480.0" mnemonicParsing="false" onAction="#handleBorrowBook" prefHeight="32.0" prefWidth="80.0" stylesheets="@../css/style.css" text="Take book" />
+                  <Label fx:id="titleLabel" layoutX="80.0" layoutY="90.0" wrapText="true" maxWidth="700">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="writerLabel" layoutX="80.0" layoutY="170.0" maxWidth="390">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="publisherLabel" layoutX="80.0" layoutY="210.0" maxWidth="390">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="isbnLabel" layoutX="80.0" layoutY="250.0" maxWidth="390">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="yearLabel" layoutX="80.0" layoutY="290.0" maxWidth="390">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="categoryLabel" layoutX="80.0" layoutY="330.0" maxWidth="390">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="copiesLabel" layoutX="260.0" layoutY="528.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ratingLabel" layoutX="474.0" layoutY="170.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                        <Label fx:id="numberOfRatingsLabel" layoutX="474.0" layoutY="206.0">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
