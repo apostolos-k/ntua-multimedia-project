@@ -21,16 +21,20 @@ An implementation of a Library Management System for the Ece Ntua 2023-24 Multim
 
 The following are some screenshots of the application:
 
-- **Admin Book Management**: 
-  ![Admin Book Management](./screenshots/admin_book_management.jpg)
+- **Login Page**:
 
-- **Login Page**: 
   ![Login Page](./screenshots/login_page.jpg)
 
-- **User Book Details**: 
+- **Admin Book Management**:
+  
+  ![Admin Book Management](./screenshots/admin_book_management.jpg)
+
+- **User Book Details**:
+  
   ![User Book Details](./screenshots/user_book_details.jpg)
 
-- **User Book Search**: 
+- **User Book Search**:
+  
   ![User Book Search](./screenshots/user_book_search.jpg)
 
 ## Features
