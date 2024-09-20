@@ -1,6 +1,6 @@
 # NTUA ECE Multimedia Project
 
-This repository contains the implementation of our project for the NTUA ECE Multimedia course. The project is a Library Management System application built using Java and JavaFX, with both admin and user functionalities.
+An implementation of a Library Management System for the Ece Ntua 2023-24 Multimedia course. The project is built using Java and JavaFX, with both admin and user functionalities.
 
 ## Table of Contents
 1. [Contributors](#contributors)
