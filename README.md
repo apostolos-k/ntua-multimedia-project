@@ -5,10 +5,11 @@ An implementation of a Library Management System for the Ece Ntua 2023-24 Multim
 ## Table of Contents
 1. [Contributors](#contributors)
 2. [Tech Stack](#tech-stack)
-3. [Features](#features)
-4. [Documentation](#documentation)
-5. [Getting Started](#getting-started)
-6. [License](#license)
+3. [Screenshots](#screenshots)
+4. [Features](#features)
+5. [Documentation](#documentation)
+6. [Getting Started](#getting-started)
+7. [License](#license)
 
 ## Contributors
 - [Kolios Apostolos](https://github.com/apotolos-k)
