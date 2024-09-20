@@ -7,7 +7,6 @@ An implementation of a Library Management System for the Ece Ntua 2023-24 Multim
 2. [Tech Stack](#tech-stack)
 3. [Screenshots](#screenshots)
 4. [Features](#features)
-5. [Documentation](#documentation)
 6. [Getting Started](#getting-started)
 7. [License](#license)
 
